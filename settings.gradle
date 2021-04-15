@@ -1,0 +1,3 @@
+rootProject.name = "Vocsy Facebook Ads"
+include ':app'
+include ':VocsyFacebookAds'

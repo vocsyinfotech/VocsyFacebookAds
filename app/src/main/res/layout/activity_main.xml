@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+   <!-- Facebook Banner Start-->
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <!-- Facebook Banner END-->
+
+
+    <!-- Facebook Native Start-->
+
+    <com.facebook.ads.NativeAdLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/native_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <!-- Facebook Native END-->
+
+
+    <!-- Facebook Native Start-->
+
+    <com.facebook.ads.NativeAdLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/native_banner_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <!-- Facebook Native END-->
+
+    <!-- Facebook Native Start-->
+
+    <Button
+        android:id="@+id/inter_click"
+        android:layout_marginTop="50dp"
+        android:text="CLick ME"
+        android:onClick="Showinter"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:orientation="vertical" />
+
+    <!-- Facebook Native END-->
+
+
+</LinearLayout>
