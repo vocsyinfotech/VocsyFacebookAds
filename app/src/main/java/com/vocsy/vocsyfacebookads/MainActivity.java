@@ -1,9 +1,9 @@
 package com.vocsy.vocsyfacebookads;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.vocsy.facebookads.FacebookBanner;
 import com.vocsy.facebookads.FacebookInterstitial;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // LOAD FACEBOOK Interstitial
-        facebookInterstitial = new FacebookInterstitial(this,getString(R.string.facebook_interstitialAd_id));
+        facebookInterstitial = new FacebookInterstitial(this, getString(R.string.facebook_interstitialAd_id));
         facebookInterstitial.loadInterstitialAds(new FacebookInterstitial.ActionListener() {
             @Override
             public void performAction() {
@@ -32,25 +32,23 @@ public class MainActivity extends AppCompatActivity {
         // LOAD FACEBOOK Interstitial FINISH
 
 
-
-
         // FACEBOOK BANNER
 
-        FacebookBanner.FacebookBannerNormal(this,findViewById(R.id.banner_container),getString(R.string.facebook_banner_id));
+        FacebookBanner.FacebookBannerNormal(this, findViewById(R.id.banner_container), getString(R.string.facebook_banner_id));
 
         //FACEBOOK BANNER END
 
 
         // FACEBOOK Native
 
-        FacebookNative.FacebookNativeNormal(this,findViewById(R.id.native_ad_container),getString(R.string.facebook_native_id));
+        FacebookNative.FacebookNativeNormal(this, findViewById(R.id.native_ad_container), getString(R.string.facebook_native_id));
 
         //FACEBOOK Native END
 
 
         // FACEBOOK Native BANNER
 
-        FacebookNative.FacebookNativeBanner(this,findViewById(R.id.native_banner_ad_container),getString(R.string.facebook_native_banner_id));
+        FacebookNative.FacebookNativeBanner(this, findViewById(R.id.native_banner_ad_container), getString(R.string.facebook_native_banner_id));
 
         //FACEBOOK Native BANNER END
 
