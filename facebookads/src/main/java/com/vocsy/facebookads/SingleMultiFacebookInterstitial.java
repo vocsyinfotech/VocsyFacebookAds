@@ -2,14 +2,12 @@ package com.vocsy.facebookads;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Handler;
 
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
-import com.taishi.flipprogressdialog.FlipProgressDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +30,7 @@ public class SingleMultiFacebookInterstitial {
 
     public void loadInterstitialAds() {
 
-          interstitialAdListener = new InterstitialAdListener() {
+        interstitialAdListener = new InterstitialAdListener() {
             @Override
             public void onInterstitialDisplayed(Ad ad) {
 
@@ -82,19 +80,19 @@ public class SingleMultiFacebookInterstitial {
         imageList.add(R.drawable.ic_hourglass_empty_white_24dp);
         imageList.add(R.drawable.ic_hourglass_full_white_24dp);
 
-        FlipProgressDialog flipX = new FlipProgressDialog();
+       /* FlipProgressDialog flipX = new FlipProgressDialog();
         flipX.setImageList(imageList);
         flipX.setOrientation("rotationX");
         flipX.setBackgroundColor(Color.parseColor("#000000"));
         flipX.setBackgroundAlpha(1.0f);
-        flipX.show(mActivity.getFragmentManager(), "");
+        flipX.show(mActivity.getFragmentManager(), "");*/
         Handler handler = new Handler();
 
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Check if interstitialAd has been loaded successfully
 
-                flipX.dismiss();
+                /* flipX.dismiss();*/
                 if (interstitialAd == null || !interstitialAd.isAdLoaded()) {
                     return;
                 }
