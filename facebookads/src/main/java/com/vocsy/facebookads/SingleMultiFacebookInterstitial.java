@@ -19,10 +19,10 @@ public class SingleMultiFacebookInterstitial {
     public InterstitialAd interstitialAd;
 
 
+    InterstitialAdListener interstitialAdListener;
 
 
-
-    public SingleMultiFacebookInterstitial(Context mContext,String Ad_Unit_ID) {
+    public SingleMultiFacebookInterstitial(Context mContext, String Ad_Unit_ID) {
 
 
         interstitialAd = new InterstitialAd(mContext, Ad_Unit_ID);
@@ -32,7 +32,7 @@ public class SingleMultiFacebookInterstitial {
 
     public void loadInterstitialAds() {
 
-        InterstitialAdListener interstitialAdListener = new InterstitialAdListener() {
+          interstitialAdListener = new InterstitialAdListener() {
             @Override
             public void onInterstitialDisplayed(Ad ad) {
 
@@ -40,6 +40,11 @@ public class SingleMultiFacebookInterstitial {
 
             @Override
             public void onInterstitialDismissed(Ad ad) {
+
+                interstitialAd.loadAd(
+                        interstitialAd.buildLoadAdConfig()
+                                .withAdListener(interstitialAdListener)
+                                .build());
 
             }
 
