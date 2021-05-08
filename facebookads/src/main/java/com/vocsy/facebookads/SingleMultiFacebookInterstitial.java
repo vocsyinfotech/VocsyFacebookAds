@@ -9,9 +9,6 @@ import com.facebook.ads.AdError;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SingleMultiFacebookInterstitial {
 
     public InterstitialAd interstitialAd;
@@ -76,23 +73,14 @@ public class SingleMultiFacebookInterstitial {
 
     public void ShowinterstitialAd(Activity mActivity) {
 
-        List<Integer> imageList = new ArrayList<Integer>();
-        imageList.add(R.drawable.ic_hourglass_empty_white_24dp);
-        imageList.add(R.drawable.ic_hourglass_full_white_24dp);
 
-       /* FlipProgressDialog flipX = new FlipProgressDialog();
-        flipX.setImageList(imageList);
-        flipX.setOrientation("rotationX");
-        flipX.setBackgroundColor(Color.parseColor("#000000"));
-        flipX.setBackgroundAlpha(1.0f);
-        flipX.show(mActivity.getFragmentManager(), "");*/
         Handler handler = new Handler();
 
         handler.postDelayed(new Runnable() {
             public void run() {
                 // Check if interstitialAd has been loaded successfully
 
-                /* flipX.dismiss();*/
+
                 if (interstitialAd == null || !interstitialAd.isAdLoaded()) {
                     return;
                 }
